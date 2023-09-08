@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 500px;
+    width: 600px;
+    background: #235477;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container h1,p{
+    color: #fff;
+}
+
+.inputBox{
+    padding: 10px;
+}
+
+.inputBox input{
+    padding: 10px;
+   min-width: 250px;
+   border: none;
+   border-radius: 8px;
+   outline: none;
+   background: transparent;
+   font-size: 18px;
+   color: #fff;
+   transition: 0.4s;
+}
+
+.inputBox input:hover{
+    border: 1px solid #fff;
+}
+
+.inputBox button{
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 5px;
+    transition: 0.4s;
+
+}
+
+.inputBox button:hover{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transform: scale(0.9);
+}
+
+.message{
+    color: #fff;
+    font-size: 18px;
+
+}
