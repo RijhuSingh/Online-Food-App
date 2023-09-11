@@ -50,12 +50,12 @@ const Body = () => {
     <Shimmer /> 
   ) : (
     <>
-        <div className="search-container">
-              <input type="text" className='search-input' placeholder='search' value={searchText} onChange={(e)=>{
+        <div className="flex p-2 my-3">
+              <input type="text" className='border border-red-100 w-72 p-1 rounded-lg mx-2' placeholder='search' value={searchText} onChange={(e)=>{
                   setSearchText(e.target.value)
               }}   />
 
-              <button className="search-btn" onClick={()=>{
+              <button className="p-1 bg-red-200 rounded-lg hover:bg-red-300" onClick={()=>{
                   const data=filterData(searchText,allRestaurants);
                   setFilteredRestaurants(data);
                   // setSearchText(data);
@@ -63,13 +63,13 @@ const Body = () => {
               }} >Search</button>
           </div>
     
-      <div className='restaurant-list' >
+      <div className='flex flex-wrap' >
       {
         filteredRestaurants.map((res)=>{
           return (
-            <Link to={"/restaurant/" + res.info.id} key={res?.info?.id} className='body-container' >
-              <img src={RES_IMG_CDN + res?.info?.cloudinaryImageId} alt="" />
-              <h3 className='body-h3' >{res?.info?.name}</h3>
+            <Link to={"/restaurant/" + res.info.id} key={res?.info?.id} className='w-[340px] p-2 h-[300px] m-4 rounded-lg shadow-lg flex flex-col justify-center items-center' >
+              <img className='w-[320px] h-[240px] rounded-lg' src={RES_IMG_CDN + res?.info?.cloudinaryImageId} alt="" />
+              <h3 className='' >{res?.info?.name}</h3>
             </Link>
           )
         })
